@@ -30,7 +30,7 @@ const Packages = () => {
               <p className="text-sm text-gray-400 mb-6">STARTER WEBSITE</p>
               <div className="mb-8">
                 <span className="text-5xl sm:text-6xl font-bold text-cyan-400">
-                  $198
+                  $100
                 </span>
                 <span className="text-gray-400 text-lg">/month</span>
               </div>
@@ -71,7 +71,7 @@ const Packages = () => {
           </div>
 
           {/* ===== Premium Package ===== */}
-          <div className="relative group bg-gray-900/60 backdrop-blur-md border border-cyan-400 rounded-2xl overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(34,211,238,0.4)]">
+          <div className="relative group bg-gray-900/60 backdrop-blur-md border border-cyan-400 rounded-2xl .overflow-visible transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(34,211,238,0.4)]">
             <div className="absolute -top-4 right-6 bg-cyan-400 text-black px-5 py-1.5 font-bold text-sm rounded shadow-md">
               PREMIUM
             </div>

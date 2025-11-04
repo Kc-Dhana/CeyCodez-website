@@ -24,7 +24,7 @@ const About = () => {
           {/* Our Mission */}
           <div className="relative bg-gray-900/60 backdrop-blur-md border border-cyan-500/30 rounded-2xl p-6 sm:p-8 transition-all duration-500 hover:border-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.3)]">
             <div className="flex items-start space-x-4 sm:space-x-5">
-              <div className="p-3 sm:p-4 border-2 border-cyan-400 bg-cyan-400/10 rounded-xl flex-shrink-0">
+              {/* <div className="p-3 sm:p-4 border-2 border-cyan-400 bg-cyan-400/10 rounded-xl flex-shrink-0">
                 <svg
                   className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-400"
                   viewBox="0 0 24 24"
@@ -36,7 +36,7 @@ const About = () => {
                   <path d="M2 17l10 5 10-5" />
                   <path d="M2 12l10 5 10-5" />
                 </svg>
-              </div>
+              </div> */}
               <div>
                 <h3 className="text-2xl sm:text-3xl font-bold mb-3 text-cyan-400">
                   OUR MISSION
@@ -44,9 +44,9 @@ const About = () => {
                 <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                   At{" "}
                   <span className="text-cyan-400 font-semibold">CeyCodez</span>,
-                  our mission is to empower students and startups by providing
-                  them with the tools, systems, and guidance to bring their ideas
-                  to life — from concept to execution.
+                  our mission is To empower businesses of all sizes through cutting-edge, 
+                  reliable, and scalable software solutions, delivered with exceptional 
+                  agility and a deep commitment to our clients' success and growth.
                 </p>
               </div>
             </div>
@@ -60,12 +60,12 @@ const About = () => {
                   OUR VISION
                 </h3>
                 <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                  We envision a future where creativity and technology seamlessly
-                  connect — enabling young innovators to transform academic and
-                  entrepreneurial ideas into impactful real-world solutions.
+                  To be the globally recognized leader in custom software development, 
+                  continuously setting new benchmarks for innovation and playing 
+                  a pivotal role in shaping the digital future across key industries.
                 </p>
               </div>
-              <div className="p-3 sm:p-4 border-2 border-cyan-400 bg-cyan-400/10 rounded-xl flex-shrink-0">
+              {/* <div className="p-3 sm:p-4 border-2 border-cyan-400 bg-cyan-400/10 rounded-xl flex-shrink-0">
                 <svg
                   className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-400"
                   viewBox="0 0 24 24"
@@ -76,7 +76,7 @@ const About = () => {
                   <path d="M12 2L2 7l10 5 10-5-10-5z" />
                   <path d="M2 17l10 5 10-5" />
                 </svg>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
