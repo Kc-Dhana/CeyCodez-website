@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+/* Custom Scrollbar Styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(17, 24, 39, 0.6); /* dark gradient match */
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #06b6d4, #0891b2);
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #22d3ee, #06b6d4);
+}
+
+/* Firefox support */
+.custom-scrollbar {
+  scrollbar-color: #06b6d4 rgba(17, 24, 39, 0.6);
+  scrollbar-width: thin;
+}
+
+/* Smooth scrolling behavior globally */
+html {
+  scroll-behavior: smooth;
+}

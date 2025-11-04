@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section
       ref={aboutRef}
-      className="min-h-screen py-16 sm:py-20 md:py-24 flex flex-col justify-center relative text-white bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 overflow-hidden px-4 sm:px-6"
+      className="min-h-screen py-16 sm:py-20 md:py-24 flex flex-col justify-center relative text-white from-gray-950 via-slate-900 to-gray-950 overflow-hidden px-4 sm:px-6"
     >
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
@@ -86,28 +86,37 @@ const About = () => {
           <h3 className="text-3xl sm:text-4xl font-bold mb-10 text-cyan-400 tracking-tight">
             MEET OUR TEAM
           </h3>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
             {[
               {
                 name: "Kavinda Appuhamy",
                 role: "Founder & Fullstack Software Engineer",
+                image: "public/Kavinda.png", // 👈 your image path
               },
               {
                 name: "Dhananjaya Perera",
                 role: "Fullstack Software Engineer",
+                image: "public/Dhana.png",
               },
               {
                 name: "Thamalu Amarasinhe",
                 role: "Fullstack Software Engineer",
+                image: "public/Thamalu.png",
               },
             ].map((member, idx) => (
               <div
                 key={idx}
                 className="group text-center transition-all duration-300 hover:scale-105"
               >
-                <div className="w-28 h-28 sm:w-32 sm:h-32 mx-auto mb-5 rounded-full border-4 border-cyan-400 bg-gray-800 overflow-hidden shadow-[0_0_20px_rgba(34,211,238,0.2)] group-hover:shadow-[0_0_30px_rgba(34,211,238,0.4)] transition-all duration-300">
-                  <div className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-900"></div>
+                <div className="w-28 h-28 sm:w-32 sm:h-32 mx-auto mb-5 rounded-full border-4 border-cyan-400 overflow-hidden shadow-[0_0_20px_rgba(34,211,238,0.2)] group-hover:shadow-[0_0_30px_rgba(34,211,238,0.4)] transition-all duration-300">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
+
                 <h4 className="font-semibold text-base sm:text-lg mb-1 text-white">
                   {member.name}
                 </h4>

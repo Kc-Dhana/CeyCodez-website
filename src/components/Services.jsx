@@ -36,7 +36,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 md:px-10 py-16 sm:py-20 bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 text-white overflow-hidden">
+    <section className="min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 md:px-10 py-16 sm:py-20 from-gray-950 via-slate-900 to-gray-950 text-white overflow-hidden">
       {/* Section Header */}
       <div className="text-center mb-14">
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-500 text-transparent bg-clip-text drop-shadow-[0_0_25px_rgba(34,211,238,0.4)]">

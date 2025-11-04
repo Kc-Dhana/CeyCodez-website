@@ -4,9 +4,9 @@ const Packages = () => {
   const packagesRef = useRef(null);
 
   return (
-    <section
+    <section 
       ref={packagesRef}
-      className="min-h-screen py-16 sm:py-20 flex flex-col justify-center relative text-white bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 overflow-hidden"
+      className="min-h-screen py-20 sm:py-20 flex flex-col justify-center relative text-white  from-gray-950 via-slate-900 to-gray-950 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 relative z-10">
         {/* Section Header */}

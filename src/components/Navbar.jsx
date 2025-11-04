@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ isScrolled, activeSection, smoothScrollTo }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
 
   const navItems = [
-    { name: "HOME", path: "/" },
-    { name: "ABOUT", path: "/about" },
-    { name: "SERVICES", path: "/services" },
-    { name: "PACKAGES", path: "/packages" },
-    { name: "CONTACT", path: "/contact" },
-    { name: "FAQs", path: "/faqs" },
+    { name: "HOME", id: "hero" },
+    { name: "ABOUT", id: "about" },
+    { name: "SERVICES", id: "services" },
+    { name: "PACKAGES", id: "packages" },
+    { name: "CONTACT", id: "contact" },
+    { name: "FAQs", id: "faqs" },
   ];
 
   return (
-    <nav className="fixed w-full z-50 bg-transparent backdrop-blur-sm">
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? "bg-black/60 backdrop-blur-lg shadow-md" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center space-x-3">
@@ -27,20 +29,20 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-10">
           {navItems.map((item) => (
-            <Link
+            <button
               key={item.name}
-              to={item.path}
+              onClick={() => smoothScrollTo(item.id)}
               className={`font-semibold tracking-wide relative pb-2 transition-colors duration-300 ${
-                location.pathname === item.path
+                activeSection === item.id
                   ? "text-cyan-400"
                   : "text-white hover:text-cyan-400"
               }`}
             >
               {item.name}
-              {location.pathname === item.path && (
+              {activeSection === item.id && (
                 <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-400 rounded-full" />
               )}
-            </Link>
+            </button>
           ))}
         </div>
 
@@ -57,18 +59,20 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden px-6 pb-4 space-y-3 bg-black/40 backdrop-blur-md rounded-b-xl">
           {navItems.map((item) => (
-            <Link
+            <button
               key={item.name}
-              to={item.path}
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                smoothScrollTo(item.id);
+                setMobileMenuOpen(false);
+              }}
               className={`block w-full text-left py-2 font-semibold transition-colors duration-300 ${
-                location.pathname === item.path
+                activeSection === item.id
                   ? "text-cyan-400"
                   : "text-white hover:text-cyan-400"
               }`}
             >
               {item.name}
-            </Link>
+            </button>
           ))}
         </div>
       )}
