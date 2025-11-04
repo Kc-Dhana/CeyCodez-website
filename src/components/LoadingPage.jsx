@@ -1,0 +1,54 @@
+import React, { useState, useEffect } from "react";
+import AnimatedBackground from "./AnimatedBackground";
+
+const LoadingPage = ({ onFinish }) => {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((p) => {
+        if (p >= 100) {
+          clearInterval(timer);
+          setTimeout(onFinish, 500);
+          return 100;
+        }
+        return p + 2;
+      });
+    }, 30);
+    return () => clearInterval(timer);
+  }, [onFinish]);
+
+  return (
+    <div className="min-h-screen w-full bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 flex items-center justify-center relative overflow-hidden px-4">
+      {/* Animated Background */}
+      <AnimatedBackground />
+
+      {/* Center Content */}
+      <div className="text-center relative z-10 w-full flex flex-col items-center">
+        {/* Logo */}
+        <div className="mb-6 sm:mb-8">
+          <img
+            src="/CeyCodez_Logo.png"
+            alt="CeyCodez Logo"
+            className="w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 mx-auto object-contain drop-shadow-[0_0_15px_rgba(96,165,250,0.5)]"
+          />
+        </div>
+
+        {/* Progress Bar */}
+        <div className="w-[80%] sm:w-[400px] h-3 bg-gray-900 rounded-full border border-cyan-500 mx-auto overflow-hidden mb-4">
+          <div
+            className="h-full bg-cyan-400 transition-all duration-300"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+
+        {/* Loading Text */}
+        <p className="text-white text-sm sm:text-base md:text-lg tracking-[0.25em] sm:tracking-[0.3em]">
+          INITIALIZING...
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default LoadingPage;
