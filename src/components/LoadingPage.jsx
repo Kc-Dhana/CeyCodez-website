@@ -3,13 +3,17 @@ import AnimatedBackground from "./AnimatedBackground";
 
 const LoadingPage = ({ onFinish }) => {
   const [progress, setProgress] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress((p) => {
         if (p >= 100) {
           clearInterval(timer);
-          setTimeout(onFinish, 500);
+          // Start transition animation
+          setIsTransitioning(true);
+          // Call onFinish after the transition animation completes
+          setTimeout(onFinish, 1000);
           return 100;
         }
         return p + 2;
@@ -26,7 +30,9 @@ const LoadingPage = ({ onFinish }) => {
       {/* Center Content */}
       <div className="text-center relative z-10 flex flex-col items-center justify-center w-full h-full">
         {/* Logo */}
-        <div className="mb-8 flex justify-center">
+        <div className={`mb-8 flex justify-center transition-all duration-1000 ${
+          isTransitioning ? "scale-150 opacity-0" : "scale-100 opacity-100"
+        }`}>
           <img
             src="/CeyCodez_Logo.webp"
             alt="CeyCodez Logo"
@@ -35,7 +41,9 @@ const LoadingPage = ({ onFinish }) => {
         </div>
 
         {/* Progress Bar */}
-        <div className="w-[85%] sm:w-[400px] h-3 bg-gray-900 rounded-full border border-cyan-500 mx-auto overflow-hidden mb-5">
+        <div className={`w-[85%] sm:w-[400px] h-3 bg-gray-900 rounded-full border border-cyan-500 mx-auto overflow-hidden mb-5 transition-opacity duration-500 ${
+          isTransitioning ? "opacity-0" : "opacity-100"
+        }`}>
           <div
             className="h-full bg-cyan-400 transition-all duration-300"
             style={{ width: `${progress}%` }}
@@ -43,7 +51,9 @@ const LoadingPage = ({ onFinish }) => {
         </div>
 
         {/* Loading Text */}
-        <p className="text-white text-sm sm:text-base md:text-lg tracking-[0.25em] sm:tracking-[0.3em]">
+        <p className={`text-white text-sm sm:text-base md:text-lg tracking-[0.25em] sm:tracking-[0.3em] transition-opacity duration-500 ${
+          isTransitioning ? "opacity-0" : "opacity-100"
+        }`}>
           INITIALIZING...
         </p>
       </div>

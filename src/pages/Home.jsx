@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import About from "../components/About";
 import Services from "../components/Services";
 import Packages from "../components/Packages";
-import Portfolio from "../components/PortfolioSection"; // ✅ Add this import
+import Portfolio from "../components/PortfolioSection";
 import FAQs from "../components/FAQs";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
@@ -14,12 +14,18 @@ const Home = () => {
   const [activeSection, setActiveSection] = useState("hero");
   const [isScrolled, setIsScrolled] = useState(false);
   const [showScrollUp, setShowScrollUp] = useState(false);
+  const [fadeIn, setFadeIn] = useState(false);
+
+  // Trigger fade-in animation on mount
+  useEffect(() => {
+    setTimeout(() => setFadeIn(true), 100);
+  }, []);
 
   // Smooth scroll to section
   const smoothScrollTo = (elementId) => {
     const element = document.getElementById(elementId);
     if (element) {
-      const offsetTop = element.offsetTop - 80; // Adjust for navbar height
+      const offsetTop = element.offsetTop - 80;
       window.scrollTo({ top: offsetTop, behavior: "smooth" });
     }
   };
@@ -71,17 +77,17 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 text-white relative overflow-x-hidden">
+    <div className={`min-h-screen bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950 text-white relative overflow-x-hidden transition-opacity duration-1000 ${
+      fadeIn ? "opacity-100" : "opacity-0"
+    }`}>
       <AnimatedBackground />
 
-      {/* Navbar */}
       <Navbar
         isScrolled={isScrolled}
         activeSection={activeSection}
         smoothScrollTo={smoothScrollTo}
       />
 
-      {/* Page Sections */}
       <section id="hero" className="scroll-mt-20">
         <Hero scrollToPackages={scrollToPackages} />
       </section>
@@ -94,7 +100,6 @@ const Home = () => {
         <Services />
       </section>
 
-      {/* ✅ Add Portfolio Section */}
       <section id="portfolio" className="scroll-mt-20">
         <Portfolio />
       </section>
@@ -113,7 +118,6 @@ const Home = () => {
 
       <Footer />
 
-      {/* Scroll-Up Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className={`fixed bottom-6 right-6 w-12 h-12 flex items-center justify-center 
@@ -127,8 +131,7 @@ const Home = () => {
         ↑
       </button>
 
-      {/* Custom Scrollbar Styling */}
-      <style jsx global>{`
+      <style jsx global = "true">{`
         ::-webkit-scrollbar {
           width: 8px;
         }
