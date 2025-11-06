@@ -24,18 +24,18 @@ const LoadingPage = ({ onFinish }) => {
       <AnimatedBackground />
 
       {/* Center Content */}
-      <div className="text-center relative z-10 w-full flex flex-col items-center">
+      <div className="text-center relative z-10 flex flex-col items-center justify-center w-full h-full">
         {/* Logo */}
-        <div className="mb-6 sm:mb-8">
+        <div className="mb-8 flex justify-center">
           <img
-            src="/CeyCodez_Logo.png"
+            src="/CeyCodez_Logo.webp"
             alt="CeyCodez Logo"
-            className="w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 mx-auto object-contain drop-shadow-[0_0_15px_rgba(96,165,250,0.5)]"
+            className="w-32 h-32 sm:w-48 sm:h-48 md:w-60 md:h-60 object-contain drop-shadow-[0_0_15px_rgba(96,165,250,0.5)]"
           />
         </div>
 
         {/* Progress Bar */}
-        <div className="w-[80%] sm:w-[400px] h-3 bg-gray-900 rounded-full border border-cyan-500 mx-auto overflow-hidden mb-4">
+        <div className="w-[85%] sm:w-[400px] h-3 bg-gray-900 rounded-full border border-cyan-500 mx-auto overflow-hidden mb-5">
           <div
             className="h-full bg-cyan-400 transition-all duration-300"
             style={{ width: `${progress}%` }}

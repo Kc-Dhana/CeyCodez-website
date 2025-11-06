@@ -133,10 +133,10 @@ const Contact = () => {
         }`}
         data-animate="header"
       >
-        <h2 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 tracking-tight bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-500 text-transparent bg-clip-text drop-shadow-[0_0_20px_rgba(34,211,238,0.4)]">
           Get In Touch
         </h2>
-        <p className="text-xl md:text-2xl text-cyan-400/90">
+        <p className="text-gray-300 text-base sm:text-lg md:text-xl font-light max-w-3xl mx-auto">
           Let’s build the future together.
         </p>
       </div>

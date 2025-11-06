@@ -4,7 +4,7 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     q: "What services do you offer?",
-    a: "We provide full-stack web and mobile app development, UI/UX design, and multimedia solutions.",
+    a: "We provide full-stack Websites, Enterprise Softwares, UI/UX designs, and multimedia solutions.",
   },
   {
     q: "Can you help with university projects?",
@@ -26,7 +26,7 @@ const FAQs = () => {
         <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight">
           FAQs
         </h2>
-        <p className="text-cyan-400/80 text-lg md:text-xl mt-3">
+        <p className="text-gray-300 text-base sm:text-lg md:text-xl font-light max-w-3xl mx-auto">
           Everything you need to know about our services
         </p>
       </div>

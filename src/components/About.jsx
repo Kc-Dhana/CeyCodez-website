@@ -92,17 +92,17 @@ const About = () => {
               {
                 name: "Kavinda Appuhamy",
                 role: "Co-Founder & Fullstack Software Engineer",
-                image: "/Kavinda.png",
+                image: "/Kavinda.webp",
               },
               {
                 name: "Dhananjaya Perera",
                 role: "Co-Founder & Fullstack Software Engineer",
-                image: "/Dhana.png",
+                image: "/Dhana.webp",
               },
               {
                 name: "Thamalu Amarasinhe",
                 role: "Co-Founder & Fullstack Software Engineer",
-                image: "/Thamalu.png",
+                image: "/Thamalu.webp",
               },
             ].map((member, idx) => (
               <div

@@ -38,7 +38,7 @@ const Hero = ({ scrollToPackages }) => {
         {/* RIGHT SIDE — Image (Top on Mobile) */}
         <div className="flex-1 flex justify-center md:justify-center md:mb-0">
           <img
-            src="/Lion1.png"
+            src="/Lion1.webp"
             alt="CeyCodez Logo"
             className="w-72 sm:w-[400px] md:w-[480px] lg:w-[550px] xl:w-[600px] animate-float"
           />

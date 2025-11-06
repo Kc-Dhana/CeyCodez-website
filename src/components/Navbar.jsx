@@ -8,8 +8,8 @@ const Navbar = ({ isScrolled, activeSection, smoothScrollTo }) => {
     { name: "HOME", id: "hero" },
     { name: "ABOUT", id: "about" },
     { name: "SERVICES", id: "services" },
-    { name: "PACKAGES", id: "packages" },
     { name: "PORTFOLIO", id: "portfolio" },
+    { name: "PACKAGES", id: "packages" },
     { name: "CONTACT", id: "contact" },
     { name: "FAQs", id: "faqs" },
   ];
@@ -23,8 +23,8 @@ const Navbar = ({ isScrolled, activeSection, smoothScrollTo }) => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex items-center space-x-3">
-          <img src="/CeyCodez_Logo.png" alt="Logo" className="w-12 h-12" />
-          <img src="/CeyCodez_name.png" alt="Name" className="w-40" />
+          {/* <img src="/CeyCodez_Logo.webp" alt="Logo" className="w-12 h-12" /> */}
+          <img src="/CeyCodez_name.webp" alt="Name" className="w-40" />
         </div>
 
         {/* Desktop Menu */}
