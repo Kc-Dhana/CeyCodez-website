@@ -259,7 +259,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-400 mb-1">Email</p>
-                <p className="font-semibold">contact@ceycodez.com</p>
+                <p className="font-semibold">ceycodez.official@gmail.com</p>
               </div>
             </div>
 
@@ -269,7 +269,9 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-400 mb-1">Phone</p>
-                <p className="font-semibold">+1 (555) 123-4567</p>
+                <p className="font-semibold">+94 76 921 0099</p>
+                {/* <p className="font-semibold">+94 76 921 0099</p>
+                <p className="font-semibold">+94 76 921 0099</p> */}
               </div>
             </div>
 
@@ -279,7 +281,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-400 mb-1">Address</p>
-                <p className="font-semibold">123 Tech Street, Digital City</p>
+                <p className="font-semibold">---</p>
               </div>
             </div>
           </div>
